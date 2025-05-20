@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Grounded Task Axes: Zero-Shot Semantic Skill Generalization via Task-Axis Controllers and Visual Foundation Models
+">
+  <meta name="keywords" content="Grounded, Task-axes, DINOv2, Zero-Shot, SD-DINO, Robotics, Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grounded Task Axes: Zero-Shot Semantic Skill Generalization via Task-Axis Controllers and Visual Foundation Models
+</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/gta_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://iamlab-cmu.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://myunusseker.github.io">
+            Personal Website
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+            <img src="./static/images/gta_icon_white.png" alt="GTA Logo" style="width: 250px; margin-right: 1rem; margin-bottom: 1rem;">
+            <h1 class="title is-1 publication-title" style="max-width: 1000px; text-align: center;">
+              Grounded Task Axes: Zero-Shot Semantic Skill Generalization via Task-Axis Controllers and Visual Foundation Models
+            </h1>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://myunusseker.github.io/">M. Yunus Seker</a>,</span>
+            <span class="author-block">
+              <a href="https://engineering.cmu.edu/directory/bios/aggarwal-shobhit.html">Shobhit Aggarwal</a>,</span>
+            <span class="author-block">
+              <a href="https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/">Oliver Kroemer</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">The Robotics Institute<br> Carnegie Mellon University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.11680"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="./static/videos/video.mp4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/myunusseker/gta"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container">
+    <div class="hero-body">
+
+      <img id="teaser" height="100%" src="./static/images/teaser_website.png" />
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Grounded Task-Axes (GTAs):</span>  Our system generalizes task-axis controllers zero-shot via vision-based keypoint correspondences.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Spatula.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Pouring.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Insertion.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Screwing.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Transferring skills between different objects remains one of the core challenges of open-world robot manipulation.
+            Generalization needs to take into account the high-level structural differences between distinct objects while
+            still maintaining similar low-level interaction control.
+          </p>
+          <p>
+            In this paper, we propose an example-based zero-shot approach to skill transfer. Rather than treating skills as atomic,
+            we decompose skills into a prioritized list of grounded task-axis (GTA) controllers. Each GTAC defines an adaptable
+            controller, such as a position or force controller, along an axis. Importantly, the GTACs are grounded in object
+            key points and axes, e.g., the relative position of a screw head or the axis of its shaft. Zero-shot transfer
+            is thus achieved by finding semantically-similar grounding features on novel target objects. We achieve this
+            example-based grounding of the skills through the use of foundation models, such as SD-DINO, that can detect
+            semantically similar keypoints of objects.  We evaluate our framework on real-robot experiments, including screwing,
+            pouring, and spatula scraping tasks, and demonstrate robust and versatile controller transfer for each.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column">-->
+<!--        <h2 class="title is-3">Video (More Coming Soon)</h2>-->
+<!--        <div class="publication-video">-->
+<!--          <video poster="" id="paper_video" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/Spatula.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img id="method" height="100%" src="./static/images/method_website.png" />
+          <p>
+            Our method enables robots to perform manipulation tasks on novel objects by grounding modular task-axis controllers using visual correspondences.
+            We begin by selecting functionally meaningful keypoints on a reference object, which define the structure of lifted skills—task specifications that are not tied to any specific object geometry.
+            We use a visual foundation model, SD-DINO, to extract dense features from both the reference and target images, and match the keypoints across objects based on semantic similarity.
+            The corresponding keypoints on the target object, together with 3D point cloud data, allow us to reconstruct axes such as surface normals or edge directions, enabling the instantiation of grounded task-axis controllers.
+          </p>
+          <p>
+            Each controller in our framework operates along one or more of these grounded axes and keypoints.
+            We support multiple controller types—such as position alignment (<code>PosAlign</code>), axis alignment (<code>AxisAlign</code>), force control (<code>ForceAlign</code>), and waypoint traversal (<code>PosWaypoint</code>)—that can be composed into multi-step skills.
+            These controllers are prioritized and projected into each other's null spaces to ensure conflict-free execution.
+            Importantly, all controllers are specified geometrically and grounded in object-relative frames, which allows zero-shot transfer to novel objects without retraining or task-specific demonstrations.
+            Our method has been evaluated on real-world tasks like scraping, pouring, and screwing, showing robust generalization across diverse tools and object geometries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{seker2025groundedtaskaxeszeroshot,
+      title={Grounded Task Axes: Zero-Shot Semantic Skill Generalization via Task-Axis Controllers and Visual Foundation Models},
+      author={M. Yunus Seker and Shobhit Aggarwal and Oliver Kroemer},
+      year={2025},
+      eprint={2505.11680},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2505.11680},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
