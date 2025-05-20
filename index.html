@@ -3,19 +3,6 @@
 <head>
   <meta charset="utf-8">
   <!-- Redirect to canonical /GTA/ path -->
-  <script>
-    (function() {
-      const canonicalPath = "/GTA/";
-      const currentPath = window.location.pathname;
-
-      // Case-insensitive match for /gta or /gta/
-      if (currentPath.toLowerCase() === "/gta" || currentPath.toLowerCase() === "/gta/") {
-        // Redirect with trailing slash and correct case
-        window.location.replace(canonicalPath);
-      }
-    })();
-  </script>
-
   <!-- Set base URL to ensure all assets resolve correctly -->
   <base href="/GTA/">
   <meta name="description"
